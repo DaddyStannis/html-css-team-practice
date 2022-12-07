@@ -1,0 +1,16 @@
+@mixin main-font(
+  $weight,
+  $size,
+  $height,
+  $spacing,
+  $transform: none,
+  $style: normal
+) {
+  font-family: 'Oswald', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+  text-transform: $transform;
+  font-style: $style;
+}
