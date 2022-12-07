@@ -1,0 +1,40 @@
+$colors: (
+  'primary': #22356f,
+  'primary-transp': rgba(34, 53, 111, 0.5),
+  'main': #62d0df,
+  'dots': #e9b730,
+);
+
+@function getColor($key) {
+  @return map get($colors, $key);
+}
+
+$font-size: (
+  'title-l': 48px,
+  'title-m': 36px,
+  'title-s': 16px,
+  'title-xs': 14px,
+
+  'text-xl': 36px,
+  'text-l': 24px,
+  'text-m': 16px,
+  'text-s': 14px,
+
+  'subtitle-l': 64px,
+  'subtitle-m': 28px,
+  'subtitle-l': 64px,
+);
+
+@function getFontSize($key) {
+  @return map-get($font-size, $key);
+}
+
+$font-weight: (
+  'l': 700,
+  'm': 500,
+  's': 400,
+);
+
+@function getFontSize($key) {
+  @return map-get($font-weight, $key);
+}
