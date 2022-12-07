@@ -1,0 +1,11 @@
+@mixin flex($align: center, $justify: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin absolute($top: 50%, $left: 50%, $X: -50%, $Y: -50%) {
+  top: $top;
+  bottom: $left;
+  transform: translate($X, $Y);
+}

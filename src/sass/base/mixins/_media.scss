@@ -1,0 +1,32 @@
+$media-max: (
+  'phone-resp': 479px,
+  'phone': 767px,
+  'tablet': 1299px,
+  'desktop-resp': 1439px,
+);
+
+$media-min: (
+  'tablet': 768px,
+  'desktop-resp': 1300px,
+  'desktop': 1440px,
+);
+
+@mixin media-max($breakpoint) {
+  @each $breakpoints, $size in $media-max {
+    @if $breakpoint==$breakpoints {
+      @media screen and (max-width: $size) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin media-min($breakpoint) {
+  @each $breakpoints, $size in $media-min {
+    @if $breakpoint==$breakpoints {
+      @media screen and (min-width: $size) {
+        @content;
+      }
+    }
+  }
+}
