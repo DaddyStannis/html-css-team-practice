@@ -1,0 +1,27 @@
+$containerWidth: 1470px; // 1440px + 15px*2 (страховочний відступ з двох сторін)
+
+.container {
+  max-width: $containerWidth;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+@include media-max('phone') {
+  .container {
+    width: 480px;
+  }
+}
+
+@include media-min('tablet') {
+  .container {
+    width: map-get($media-min, 'tablet');
+  }
+}
+
+@include media-min('desktop') {
+  .container {
+    width: $containerWidth;
+  }
+}
