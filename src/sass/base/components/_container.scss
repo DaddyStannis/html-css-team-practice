@@ -7,18 +7,18 @@
 
 @include media-max('phone') {
   .container {
-    width: 510px;
+    max-width: 510px;
   }
 }
 
 @include media-min('tablet') {
   .container {
-    width: 798px;
+    max-width: 798px;
   }
 }
 
 @include media-min('desktop') {
   .container {
-    width: 1330px;
+    max-width: 1470px;
   }
 }
