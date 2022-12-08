@@ -1,14 +1,39 @@
 <header class="header">
   <div class="container">
-    <span class="logo">Thrivetalk</span>
-    <nav class="nav">
-      <ul class="list">
-        <li class="list__item"><a href="#" class="list__link">Home</a></li>
-        <li class="list__item"><a href="#" class="list__link">About</a></li>
-        <li class="list__item"><a href="#" class="list__link">Services</a></li>
-        <li class="list__item"><a href="#" class="list__link">Blog</a></li>
+    <a class="logo header__logo" href="./index.html">Thrivetalk</a>
+    <nav class="nav header__nav is-hidden js-menu-container">
+      <ul class="list header__list">
+        <li class="list__item header__list-item">
+          <a
+            href="#"
+            class="list__link header__list-link js-mobile__link current"
+            >Home</a
+          >
+        </li>
+        <li class="list__item header__list-item">
+          <a href="#" class="list__link header__list-link js-mobile__link"
+            >About</a
+          >
+        </li>
+        <li class="list__item header__list-item">
+          <a href="#" class="list__link header__list-link js-mobile__link"
+            >Services</a
+          >
+        </li>
+        <li class="list__item header__list-item">
+          <a href="#" class="list__link header__list-link js-mobile__link"
+            >Blog</a
+          >
+        </li>
       </ul>
     </nav>
+
+    <button
+      class="button header__open-btn is-hidden js-toggle-menu"
+      type="button"
+    >
+      menu
+    </button>
     <button class="button" type="button">CONTACT US</button>
   </div>
 </header>
