@@ -1,0 +1,14 @@
+@mixin grid-fixed($columns: 1, $row-gap: 0, $column-gap: 0) {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  @if $columns >= 2 {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(calc((100% - ($column-gap * ($columns - 1))) / $columns), 1fr)
+    );
+    row-gap: $row-gap;
+    column-gap: $column-gap;
+  }
+}
