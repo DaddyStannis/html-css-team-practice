@@ -2,13 +2,23 @@
   display: grid;
 
   grid-template-columns: 1fr;
+  row-gap: $row-gap;
 
   @if $columns >= 2 {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(calc((100% - ($column-gap * ($columns - 1))) / $columns), 1fr)
-    );
-    row-gap: $row-gap;
-    column-gap: $column-gap;
+    @if $column-gap >= 1 {
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(calc((100% - ($column-gap * ($columns - 1))) / $columns), 1fr)
+      );
+      row-gap: $row-gap;
+      column-gap: $column-gap;
+    } @else {
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(calc(100% / $columns), 1fr)
+      );
+      row-gap: $row-gap;
+      column-gap: $column-gap;
+    }
   }
 }

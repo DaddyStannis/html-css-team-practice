@@ -1,2 +1,39 @@
 @import './header-elem';
 @import './header-mod';
+
+.header {
+  width: 100%;
+
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  background-color: transparent;
+
+  padding-top: 27px;
+}
+
+.header .container {
+  @include flex(center, space-between);
+}
+
+@include media-max('phone') {
+}
+
+@include media-max('tablet') {
+}
+
+@include media-max('desktop-resp') {
+}
+
+@include media-min('tablet') {
+}
+
+@include media-min('desktop-resp') {
+}
+
+@include media-min('desktop') {
+  .header .container {
+    width: 1130px;
+  }
+}
