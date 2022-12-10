@@ -1,0 +1,54 @@
+.colored-card {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  color: white;
+  background-color: black;
+
+  &:hover > p {
+    box-shadow: inset 0px -1px 0px #ffffff;
+  }
+}
+
+.colored-card p {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @include main-font(700, 16px, calc(43 / 32), -0.006em);
+  color: currentColor;
+
+  box-shadow: inset 0px 1px 0px #ffffff;
+  transition: box-shadow 0.5s;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 9px;
+    height: 9px;
+
+    margin-top: 5px;
+    margin-right: 15px;
+
+    border-radius: 50%;
+    background: getColor('dots');
+  }
+}
+
+@include media-min('tablet') {
+  .colored-card {
+    flex-basis: 360px;
+    height: 360px;
+    padding: 72px 52px 0 52px;
+  }
+
+  .colored-card p {
+    padding-top: 23px;
+    padding-bottom: 23px;
+    font-size: 32px;
+
+    &::before {
+      margin-top: 10px;
+    }
+  }
+}

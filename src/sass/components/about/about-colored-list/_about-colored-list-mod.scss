@@ -1,0 +1,11 @@
+$aboutColors: (
+  '1': #ffe2de,
+  '2': #c4e769,
+  '3': #62d0df,
+  '4': #0052c1,
+);
+@for $i from 0 to 5 {
+  .about__bottom .colored-card:nth-child(#{$i}) {
+    background-color: map-get($aboutColors, #{$i});
+  }
+}

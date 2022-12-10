@@ -1,3 +1,86 @@
 @import './about-colored-list/about-colored-list';
 @import './about-text-list/about-text-list';
 @import './about-effects/about-effects';
+
+.about {
+  padding-bottom: 24px;
+}
+
+.about__top {
+  padding-top: 24px;
+}
+
+.about__title {
+  @include main-font(400, 16px, calc(28 / 16), 0.06em);
+  color: getColor('primary');
+  text-align: center;
+}
+
+.about__text {
+  margin-top: 20px;
+  @include main-font(500, 14px, calc(43 / 24), 0.005em);
+  color: getColor('primary');
+}
+
+.about__subtitle {
+  margin-top: 20px;
+  @include main-font(400, 16px, calc(24 / 16), 0.006em);
+  color: rgba(34, 53, 111, 0.5);
+  text-align: center;
+}
+
+.about__bottom {
+  margin-top: 21px;
+  @include grid-fixed(1);
+}
+
+@include media-min('tablet') {
+  .about {
+    padding-bottom: 60px;
+  }
+
+  .about__top {
+    padding: 30px;
+  }
+
+  .about__text {
+    font-size: 24px;
+  }
+
+  .about__subtitle {
+    margin-top: 0;
+  }
+
+  .about__bottom {
+    @include grid-fixed(2);
+  }
+}
+
+@include media-min('desktop') {
+  .about__top {
+    padding-top: 153px;
+    padding-left: 106px;
+  }
+
+  .about__top-wrap {
+    display: flex;
+    gap: 225px;
+  }
+
+  .about__title {
+    text-align: left;
+  }
+
+  .about__text {
+    margin-top: 0;
+    width: 592px;
+  }
+
+  .about__subtitle {
+    margin-top: 30px;
+  }
+
+  .about__bottom {
+    @include grid-fixed(4);
+  }
+}
